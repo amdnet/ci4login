@@ -46,6 +46,6 @@ class Login extends BaseController
         session()->setTempdata('password');
         session()->setTempdata('name');
         session()->setFlashdata('sukses', 'Anda berhasil Log Out!');
-        return redirect()->to(base_url('login'));
+        return redirect()->to(base_url('/'));
     }
 }
