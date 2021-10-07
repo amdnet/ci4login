@@ -9,6 +9,8 @@ class Login extends BaseController
     public function index()
     {
         return view('login');
+        // helper(['form']);
+        // echo view('login');
     }
 
     public function process()
@@ -26,7 +28,7 @@ class Login extends BaseController
                     'name' => $dataUser->name,
                     'logged_in' => TRUE
                 ]);
-                return redirect()->to(base_url('home'));
+                return redirect()->to(base_url('dashboard'));
             } else {
                 session()->setFlashdata('error', 'Username atau password salah!');
                 return redirect()->back();
@@ -39,7 +41,11 @@ class Login extends BaseController
 
     function logout()
     {
-        session()->destroy();
-        return redirect()->to('/login');
+        // session()->destroy();
+        session()->setTempdata('username');
+        session()->setTempdata('password');
+        session()->setTempdata('name');
+        session()->setFlashdata('sukses', 'Anda berhasil Log Out!');
+        return redirect()->to(base_url('login'));
     }
 }

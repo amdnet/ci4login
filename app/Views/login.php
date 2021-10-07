@@ -31,7 +31,13 @@
                     </div>
                 <?php endif; ?>
 
-                <form action="<?= base_url(); ?>/login/process" method="post">
+                <?php if (session()->getFlashdata('sukses')) : ?>
+                    <div class="alert alert-primary" role="alert">
+                        <?php echo session()->getFlashdata('sukses'); ?>
+                    </div>
+                <?php endif; ?>
+
+                <form action="<?= base_url('login/process'); ?>" method="post">
                     <?= csrf_field(); ?>
                     <div class="input-group mb-3">
                         <input type="text" name="username" id="username" placeholder="Username" class="form-control" required autofocus>
@@ -60,7 +66,7 @@
                         </div>
 
                         <div class="col-4">
-                            <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+                            <button type="submit" class="btn btn-primary btn-block">Log In</button>
                         </div>
                     </div>
                 </form>
