@@ -35,7 +35,7 @@ $routes->get('/', 'Home::index');
 // $routes->get('/dashboard', 'Dashboard::index',['filter' => 'auth']);
 // $routes->get('/register', 'Register::index');
 // $routes->post('/register/process', 'Register::process');
-$routes->get('/login', 'Login::index');
+$routes->get('/login', 'Login::index',['as' => 'login']);
 $routes->post('/login/process', 'Login::process');
 $routes->get('/logout', 'Login::logout');
 
