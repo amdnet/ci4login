@@ -20,4 +20,12 @@ class Dashboard extends BaseController
         echo view('dashboard');
         echo view('layout/footer');
     }
+
+    public function user()
+    {
+        echo view('layout/header');
+        echo view('layout/sidebar');
+        echo view('user');
+        echo view('layout/footer');
+    }
 }
