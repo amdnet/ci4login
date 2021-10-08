@@ -8,24 +8,25 @@ class Dashboard extends BaseController
     {
         // $session = session();
         // echo "Welcome back, ".$session->get('user_name');
-        // return view('dashboard');
+        return view('dashboard');
 
         // if(! session()->get('logged_in'))
         // {
         //     return redirect()->to(base_url('/')); 
         // }
 
-        echo view('layout/header');
-        echo view('layout/sidebar');
-        echo view('dashboard');
-        echo view('layout/footer');
+        // echo view('layout/header');
+        // echo view('layout/sidebar');
+        // echo view('dashboard');
+        // echo view('layout/footer');
     }
 
     public function user()
     {
-        echo view('layout/header');
-        echo view('layout/sidebar');
-        echo view('user');
-        echo view('layout/footer');
+        return view('user');
+        // echo view('layout/header');
+        // echo view('layout/sidebar');
+        // echo view('user');
+        // echo view('layout/footer');
     }
 }
