@@ -21,12 +21,12 @@ class Dashboard extends BaseController
         // echo view('layout/footer');
     }
 
-    public function user()
-    {
-        return view('user');
-        // echo view('layout/header');
-        // echo view('layout/sidebar');
-        // echo view('user');
-        // echo view('layout/footer');
-    }
+    // public function user()
+    // {
+    //     return view('user');
+    //     // echo view('layout/header');
+    //     // echo view('layout/sidebar');
+    //     // echo view('user');
+    //     // echo view('layout/footer');
+    // }
 }

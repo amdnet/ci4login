@@ -8,6 +8,14 @@
 
                 <div class="col-sm-6">
                     <!-- <h1 class="m-0">Data User</h1> -->
+                    <?php if (!empty(session()->getFlashdata('message'))) : ?>
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    <?php echo session()->getFlashdata('message'); ?>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            <?php endif; ?>
                     <a class="btn btn-primary" href="<?= base_url('user/create'); ?>" role="button">Add User Login</a>
                 </div>
 		  
@@ -46,15 +54,19 @@
                             <th>Task</th>
                             <th>Progress</th>
                             <th style="width: 40px">Label</th>
+                            <th>Aksi</th>
                         </tr>
                     </thead>
                     <tbody>
                     <?php foreach($user as $row) { ?>
                       <tr>
-                      <td>1</td>
-                      <td><?= $row->username;?></td>
-                      <td><?= $row->username;?></td>
-                      <td><?= $row->username;?></td>
+                        <td>1</td>
+                        <td><?= $row->username;?></td>
+                        <td><?= $row->password;?></td>
+                        <td><?= $row->name;?></td>
+                        <td><a title="Edit" href="<?= base_url("user/edit/$row->username"); ?>" class="btn btn-info btn-sm"><i class="nav-icon fas fa-pen"></i></a>
+                            <a title="Delete" href="<?= base_url("user/delete/$row->username") ?>" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin ingin menghapus data ?')"><i class="nav-icon fas fa-trash-alt"></i></a>
+                        </td>
                     </tr>
                     <?php } ?>
                     </tbody>

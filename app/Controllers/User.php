@@ -1,8 +1,10 @@
-<?php namespace App\Controllers;
+<?php
+
+namespace App\Controllers;
 
 use App\Models\UsersModel;
 
-class User extends BaseControlller
+class User extends BaseController
 {
     protected $user;
 
@@ -14,6 +16,6 @@ class User extends BaseControlller
     public function index()
     {
         $data['user'] = $this->user->findAll();
-        return view('user', $data);
+        return view('user/index', $data);
     }
 }
