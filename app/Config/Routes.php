@@ -33,10 +33,7 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('/', 'Login::index',['as' => 'login']);
 $routes->get('dashboard', 'Dashboard::index',['filter' => 'auth']);
-// $routes->get('/register', 'Register::index');
-// $routes->post('/register/process', 'Register::process');
-// $routes->get('/login', 'Login::index',['as' => 'login']);
-// $routes->post('/login/process', 'Login::process');
+$routes->get('user', 'User::index',['filter' => 'auth']);
 $routes->post('/process', 'Login::process');
 $routes->get('/logout', 'Login::logout');
 

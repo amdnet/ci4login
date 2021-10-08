@@ -9,23 +9,16 @@
     </li>
 
     <li class="nav-item">
-        <a href="<?= base_url('dashboard/user'); ?>" class="nav-link">
-        <i class="nav-icon fas fa-user-circle"></i>
+        <a href="<?= base_url('user'); ?>" class="nav-link">
+        <i class="fas fa-user-circle nav-icon"></i>
         <p> Data User </p>
         </a>
     </li>
 
     <li class="nav-item">
-        <a href="<?= base_url('dashboard/konsumen'); ?>" class="nav-link">
+        <a href="<?= base_url('konsumen'); ?>" class="nav-link">
         <i class="nav-icon fas fa-table"></i>
         <p> Data Konsumen </p>
-        </a>
-    </li>
-    
-    <li class="nav-item">
-        <a href="https://adminlte.io/docs/3.1/" target="_blank" class="nav-link">
-        <i class="nav-icon fas fa-file"></i>
-        <p>Documentation</p>
         </a>
     </li>
 
@@ -34,6 +27,33 @@
         <i class="nav-icon fas fa-sign-out-alt"></i>
         <p>Log Out</p>
         </a>
+    </li>
+    
+    <li class="nav-item">
+        <a href="#" class="nav-link">
+            <i class="nav-icon fas fa-file"></i>
+            <p>Dokumentasi<i class="fas fa-angle-left right"></i></p>
+        </a>
+        <ul class="nav nav-treeview">
+            <li class="nav-item">
+                <a href="https://adminlte.io/docs/3.1/" target="_blank" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Admin LTE</p>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="https://getbootstrap.com/docs/5.1/getting-started/introduction/" target="_blank" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>BootStrap 5</p>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="https://fontawesome.com/v5.15/icons" target="_blank" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>FontAwesome 5</p>
+                </a>
+            </li>
+        </ul>
     </li>
     </ul>
 </nav>
